@@ -1,0 +1,29 @@
+{
+	"levels":[
+		{
+			"id":1,
+			"sizeXY":[3,1],
+			"nodes":[
+				{
+					"xy":[0,0],
+					"connections":[0,1,0,0]
+				},{
+					"xy":[2,0],
+					"connections":[0,0,0,1]
+				}
+			]
+		},{
+			"id":2,
+			"sizeXY":[1,3],
+			"nodes":[
+				{
+					"xy":[0,0],
+					"connections":[1,0,0,0]
+				},{
+					"xy":[0,2],
+					"connections":[0,0,1,0]
+				}
+			]
+		}
+	]
+}
