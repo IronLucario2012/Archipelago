@@ -80,12 +80,14 @@ public class Level
 public class Node
 {
     public int[] xy;
-    public int[] connections;
+    public int[] finalConnections;
+    public int[] currentConnections;
 
-    public Node(int[] positionXY, int[] connectionsNESW)
+    public Node(int[] positionXY, int[] connectionsNESW, params int[] current)
     {
         xy = positionXY;
-        connections = connectionsNESW;
+        finalConnections = connectionsNESW;
+        currentConnections = current;
     }
 
     override
@@ -94,8 +96,8 @@ public class Node
         string result = "";
 
         result += "Coordinates: (" + xy[0] + "," + xy[1] + ")\n";
-        result += "Number of connections north: " + connections[0] + ", east: " + connections[1] + ", south: " + connections[2] + ", and west: " + connections[3];
-
+        result += "Number of connections that should be north: " + finalConnections[0] + ", east: " + finalConnections[1] + ", south: " + finalConnections[2] + ", and west: " + finalConnections[3] + "\n";
+        result += "Number of connections that are north: " + currentConnections[0] + ", east: " + currentConnections[1] + ", south: " + currentConnections[2] + ", and west: " + currentConnections[3] + "\n";
 
         return result;
     }
