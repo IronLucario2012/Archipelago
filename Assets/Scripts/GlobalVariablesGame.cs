@@ -21,7 +21,7 @@ public class GlobalVariablesGame : MonoBehaviour {
     {
         SceneManager.LoadScene("LevelSelectScene");
     }
-
+    
 
 }
 
