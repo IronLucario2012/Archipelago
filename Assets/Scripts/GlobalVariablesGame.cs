@@ -21,7 +21,6 @@ public class GlobalVariablesGame : MonoBehaviour {
     {
         SceneManager.LoadScene("LevelSelectScene");
     }
-    
 
 }
 
@@ -82,12 +81,14 @@ public class Node
     public int[] xy;
     public int[] finalConnections;
     public int[] currentConnections;
+    public bool buttonsUp;
 
     public Node(int[] positionXY, int[] connectionsNESW, params int[] current)
     {
         xy = positionXY;
         finalConnections = connectionsNESW;
         currentConnections = current;
+        buttonsUp = false;
     }
 
     override
