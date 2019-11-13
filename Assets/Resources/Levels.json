@@ -2,13 +2,13 @@
 	"levels":[
 		{
 			"id":1,
-			"sizeXY":[3,1],
+			"sizeXY":[4,1],
 			"nodes":[
 				{
 					"xy":[0,0],
 					"connections":[0,1,0,0]
 				},{
-					"xy":[2,0],
+					"xy":[3,0],
 					"connections":[0,0,0,1]
 				}
 			]

@@ -24,6 +24,6 @@ public class GlobalVariablesMenu : MonoBehaviour {
         TextAsset levelData = (TextAsset)Resources.Load("Levels");
         string jsonLevelString = levelData.text;
         levelList = JsonUtility.FromJson<LevelList>(jsonLevelString);
-        Debug.Log(levelList.levels[0].ToString());
+        Debug.Log(levelList.levels[levelNumber+1].ToString());
     }
 }

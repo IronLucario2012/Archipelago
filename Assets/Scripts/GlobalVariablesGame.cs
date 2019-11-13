@@ -10,11 +10,17 @@ public class GlobalVariablesGame : MonoBehaviour {
 
     public int levelNumber = 0;
     public Level currentLevel;
+    public int maxSizeX = 10;
+    public int maxSizeY = 5;
 
     private void Start()
     {
         levelNumber = GlobalVariablesMenu.levelNumber;
         currentLevel = GlobalVariablesMenu.levelList.levels[levelNumber+1];
+        if(!isLevelValid(currentLevel))
+        {
+            BackToMenu();
+        }
     }
 
     public void BackToMenu()
@@ -22,6 +28,10 @@ public class GlobalVariablesGame : MonoBehaviour {
         SceneManager.LoadScene("LevelSelectScene");
     }
 
+    public bool isLevelValid(Level lv)
+    {
+        return lv.sizeXY[0] <= maxSizeX && lv.sizeXY[1] <= maxSizeY;
+    }
 }
 
 #region Level Data Classes
